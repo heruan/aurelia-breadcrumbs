@@ -41,11 +41,22 @@
     "yargs": "^2.1.1"
   },
   "jspm": {
+    "registry": "jspm",
     "main": "index",
     "format": "amd",
+    "registry": "jspm",
     "directories": {
       "lib": "dist/amd"
     },
-    "dependencies": {}
+    "dependencies": {
+      "aurelia-dependency-injection": "github:aurelia/dependency-injection@^0.11.2",
+      "aurelia-router": "github:aurelia/router@^0.13.0",
+      "aurelia-templating": "github:aurelia/templating@^0.16.0"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
+    }
   }
 }

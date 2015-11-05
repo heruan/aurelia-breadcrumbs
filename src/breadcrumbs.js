@@ -1,4 +1,5 @@
-import {inject, customElement} from 'aurelia-framework';
+import {inject} from 'aurelia-dependency-injection';
+import {customElement} from 'aurelia-templating';
 import {Router} from 'aurelia-router';
 
 @inject(Router)
