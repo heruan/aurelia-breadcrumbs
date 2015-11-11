@@ -22,7 +22,7 @@ define(['exports', 'aurelia-dependency-injection', 'aurelia-templating', 'aureli
     _createClass(Breadcrumbs, [{
       key: 'navigate',
       value: function navigate(navigationInstruction) {
-        navigationInstruction.navigationContext.router.navigateToRoute(navigationInstruction.config.name, navigationInstruction.params);
+        navigationInstruction.router.navigateToRoute(navigationInstruction.config.name, navigationInstruction.params);
       }
     }]);
 

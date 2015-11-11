@@ -1,7 +1,7 @@
 System.register([], function (_export) {
   "use strict";
 
-  var NavigationContextValueConverter;
+  var InstructionFilterValueConverter;
 
   var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
@@ -10,30 +10,28 @@ System.register([], function (_export) {
   return {
     setters: [],
     execute: function () {
-      NavigationContextValueConverter = (function () {
-        function NavigationContextValueConverter() {
-          _classCallCheck(this, NavigationContextValueConverter);
+      InstructionFilterValueConverter = (function () {
+        function InstructionFilterValueConverter() {
+          _classCallCheck(this, InstructionFilterValueConverter);
         }
 
-        _createClass(NavigationContextValueConverter, [{
+        _createClass(InstructionFilterValueConverter, [{
           key: "toView",
-          value: function toView(navigationContext) {
-            var routes = [];
-            while (navigationContext) {
-              var navigationInstruction = navigationContext.nextInstruction;
-              if (navigationInstruction.config.title) {
-                routes.push(navigationInstruction);
+          value: function toView(navigationInstructions) {
+            return navigationInstructions.filter(function (i) {
+              if (i.config.title) {
+                return true;
+              } else {
+                return false;
               }
-              navigationContext = navigationInstruction.navigationContext.plan["default"].childNavigationContext;
-            }
-            return routes;
+            });
           }
         }]);
 
-        return NavigationContextValueConverter;
+        return InstructionFilterValueConverter;
       })();
 
-      _export("NavigationContextValueConverter", NavigationContextValueConverter);
+      _export("InstructionFilterValueConverter", InstructionFilterValueConverter);
     }
   };
 });

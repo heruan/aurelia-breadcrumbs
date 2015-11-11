@@ -13,6 +13,6 @@ export class Breadcrumbs {
   }
 
   navigate(navigationInstruction) {
-    navigationInstruction.navigationContext.router.navigateToRoute(navigationInstruction.config.name, navigationInstruction.params);
+    navigationInstruction.router.navigateToRoute(navigationInstruction.config.name, navigationInstruction.params);
   }
 }

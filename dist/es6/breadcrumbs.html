@@ -1,8 +1,8 @@
 <template>
-  <require from="./navigation-context"></require>
+  <require from="./instruction-filter"></require>
   <nav>
     <ol class="breadcrumb">
-      <li repeat.for="navigationInstruction of router.currentInstruction.navigationContext | navigationContext" class="${$last ? 'active' : ''}"
+      <li repeat.for="navigationInstruction of router.currentInstruction.getAllInstructions() | instructionFilter" class="${$last ? 'active' : ''}"
         ><template if.bind="$last">${navigationInstruction.config.navModel.title}</template
         ><template if.bind="!$last"><a href="#" click.delegate="$parent.navigate(navigationInstruction)">${navigationInstruction.config.navModel.title}</a></template>
       </li>

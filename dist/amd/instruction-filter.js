@@ -9,28 +9,26 @@ define(["exports"], function (exports) {
 
   function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-  var NavigationContextValueConverter = (function () {
-    function NavigationContextValueConverter() {
-      _classCallCheck(this, NavigationContextValueConverter);
+  var InstructionFilterValueConverter = (function () {
+    function InstructionFilterValueConverter() {
+      _classCallCheck(this, InstructionFilterValueConverter);
     }
 
-    _createClass(NavigationContextValueConverter, [{
+    _createClass(InstructionFilterValueConverter, [{
       key: "toView",
-      value: function toView(navigationContext) {
-        var routes = [];
-        while (navigationContext) {
-          var navigationInstruction = navigationContext.nextInstruction;
-          if (navigationInstruction.config.title) {
-            routes.push(navigationInstruction);
+      value: function toView(navigationInstructions) {
+        return navigationInstructions.filter(function (i) {
+          if (i.config.title) {
+            return true;
+          } else {
+            return false;
           }
-          navigationContext = navigationInstruction.navigationContext.plan["default"].childNavigationContext;
-        }
-        return routes;
+        });
       }
     }]);
 
-    return NavigationContextValueConverter;
+    return InstructionFilterValueConverter;
   })();
 
-  exports.NavigationContextValueConverter = NavigationContextValueConverter;
+  exports.InstructionFilterValueConverter = InstructionFilterValueConverter;
 });

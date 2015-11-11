@@ -27,7 +27,7 @@ var Breadcrumbs = (function () {
   _createClass(Breadcrumbs, [{
     key: 'navigate',
     value: function navigate(navigationInstruction) {
-      navigationInstruction.navigationContext.router.navigateToRoute(navigationInstruction.config.name, navigationInstruction.params);
+      navigationInstruction.router.navigateToRoute(navigationInstruction.config.name, navigationInstruction.params);
     }
   }]);
 
