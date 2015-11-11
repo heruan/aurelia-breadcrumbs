@@ -8,7 +8,9 @@ var _createClass = (function () { function defineProperties(target, props) { for
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
-var _aureliaFramework = require('aurelia-framework');
+var _aureliaDependencyInjection = require('aurelia-dependency-injection');
+
+var _aureliaTemplating = require('aurelia-templating');
 
 var _aureliaRouter = require('aurelia-router');
 
@@ -30,8 +32,8 @@ var Breadcrumbs = (function () {
   }]);
 
   var _Breadcrumbs = Breadcrumbs;
-  Breadcrumbs = (0, _aureliaFramework.customElement)('breadcrumbs')(Breadcrumbs) || Breadcrumbs;
-  Breadcrumbs = (0, _aureliaFramework.inject)(_aureliaRouter.Router)(Breadcrumbs) || Breadcrumbs;
+  Breadcrumbs = (0, _aureliaTemplating.customElement)('breadcrumbs')(Breadcrumbs) || Breadcrumbs;
+  Breadcrumbs = (0, _aureliaDependencyInjection.inject)(_aureliaRouter.Router)(Breadcrumbs) || Breadcrumbs;
   return Breadcrumbs;
 })();
 

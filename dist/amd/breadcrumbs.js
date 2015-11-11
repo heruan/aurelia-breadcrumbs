@@ -1,4 +1,4 @@
-define(['exports', 'aurelia-framework', 'aurelia-router'], function (exports, _aureliaFramework, _aureliaRouter) {
+define(['exports', 'aurelia-dependency-injection', 'aurelia-templating', 'aurelia-router'], function (exports, _aureliaDependencyInjection, _aureliaTemplating, _aureliaRouter) {
   'use strict';
 
   Object.defineProperty(exports, '__esModule', {
@@ -27,8 +27,8 @@ define(['exports', 'aurelia-framework', 'aurelia-router'], function (exports, _a
     }]);
 
     var _Breadcrumbs = Breadcrumbs;
-    Breadcrumbs = (0, _aureliaFramework.customElement)('breadcrumbs')(Breadcrumbs) || Breadcrumbs;
-    Breadcrumbs = (0, _aureliaFramework.inject)(_aureliaRouter.Router)(Breadcrumbs) || Breadcrumbs;
+    Breadcrumbs = (0, _aureliaTemplating.customElement)('breadcrumbs')(Breadcrumbs) || Breadcrumbs;
+    Breadcrumbs = (0, _aureliaDependencyInjection.inject)(_aureliaRouter.Router)(Breadcrumbs) || Breadcrumbs;
     return Breadcrumbs;
   })();
 
