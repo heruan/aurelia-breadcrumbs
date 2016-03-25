@@ -1,14 +1,19 @@
-System.register([], function (_export) {
-  'use strict';
+'use strict';
 
-  _export('configure', configure);
-
-  function configure(frameworkConfiguration, config) {
-    frameworkConfiguration.globalResources('./breadcrumbs');
-  }
-
+System.register(['./breadcrumbs', './instruction-filter'], function (_export, _context) {
+  var Breadcrumbs, InstructionFilterValueConverter;
   return {
-    setters: [],
-    execute: function () {}
+    setters: [function (_breadcrumbs) {
+      Breadcrumbs = _breadcrumbs.Breadcrumbs;
+    }, function (_instructionFilter) {
+      InstructionFilterValueConverter = _instructionFilter.InstructionFilterValueConverter;
+    }],
+    execute: function () {
+      function configure(frameworkConfiguration, config) {
+        frameworkConfiguration.globalResources('./breadcrumbs');
+      }
+
+      _export('configure', configure);
+    }
   };
 });

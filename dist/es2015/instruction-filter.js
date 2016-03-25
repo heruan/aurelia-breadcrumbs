@@ -1,4 +1,4 @@
-export class InstructionFilterValueConverter {
+export let InstructionFilterValueConverter = class InstructionFilterValueConverter {
   toView(navigationInstructions) {
     return navigationInstructions.filter(i => {
       if (i.config.title) {
@@ -8,4 +8,4 @@ export class InstructionFilterValueConverter {
       }
     });
   }
-}
+};
