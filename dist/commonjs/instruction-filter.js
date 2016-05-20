@@ -12,13 +12,13 @@ var InstructionFilterValueConverter = exports.InstructionFilterValueConverter = 
   }
 
   InstructionFilterValueConverter.prototype.toView = function toView(navigationInstructions) {
-    return navigationInstructions.filter(function (i) {
+    return navigationInstructions ? navigationInstructions.filter(function (i) {
       if (i.config.title) {
         return true;
       } else {
         return false;
       }
-    });
+    }) : [];
   };
 
   return InstructionFilterValueConverter;
