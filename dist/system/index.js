@@ -1,6 +1,8 @@
 'use strict';
 
 System.register(['./breadcrumbs', './instruction-filter'], function (_export, _context) {
+  "use strict";
+
   var Breadcrumbs, InstructionFilterValueConverter;
   return {
     setters: [function (_breadcrumbs) {
