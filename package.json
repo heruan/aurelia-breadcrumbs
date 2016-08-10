@@ -1,6 +1,6 @@
 {
   "name": "aurelia-breadcrumbs",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "A breadcrumbs pluign for Aurelia.",
   "keywords": [
     "aurelia",
@@ -62,7 +62,8 @@
   "aurelia": {
     "build": {
       "resources": [
-        "aurelia-breadcrumbs/breadcrumbs"
+        "aurelia-breadcrumbs/breadcrumbs",
+        "aurelia-breadcrumbs/instruction-filter",
       ]
     }
   }
