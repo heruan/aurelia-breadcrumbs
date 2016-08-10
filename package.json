@@ -63,7 +63,7 @@
     "build": {
       "resources": [
         "aurelia-breadcrumbs/breadcrumbs",
-        "aurelia-breadcrumbs/instruction-filter",
+        "aurelia-breadcrumbs/instruction-filter"
       ]
     }
   }
